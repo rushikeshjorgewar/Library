@@ -1,0 +1,8 @@
+{% extends "catalog/basic.html" %}
+{% block title %}logout{% endblock %}
+{% block body %}
+<div class='container-fluid text-center'>
+  <h1 class='display-2 text-center'>logged out</h1>
+  <a class='lead my-3' href="{% url 'login'%}">Click here to login again.</a>
+</div>
+{% endblock %}

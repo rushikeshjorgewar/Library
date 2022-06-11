@@ -1,0 +1,20 @@
+{% extends 'catalog/basic.html' %}
+{% block title %}{% endblock  %}
+{% block body %}
+<div class='container-flsuid'>
+    <div class='row p-5'>
+        <div class='col-6'>
+            {% for i in book %}
+            <h1 class='display-4'>{{i.name}}</h1>
+            <p class='lead'>{{i.summary}}</p>
+            {% endfor %}
+        </div>
+        <div class='col-6'>
+            {% for a in author %}
+            <h1>{{a.first_name}} {{a.last_name}}</h1>
+            <p>{{a.desc}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock  %}

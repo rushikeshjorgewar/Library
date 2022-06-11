@@ -1,0 +1,16 @@
+{% extends 'catalog/basic.html' %}
+{% block title %}{{name}}{% endblock  %}
+{% block body %}
+    <div class='container-fluid'>
+        <div class='row p-5 '>
+            <h1 class='display-4 text-center'>Books available</h1>
+            <ul>
+            {% for i in book %}
+            <li><a href="/catalog/books/{{i.id}}">{{i.name}}</a></li> - <strong>{{i.author}}</strong>
+            <p class='lead'>{{i.summary}}</p>
+            {% endfor %}
+            </ul>
+            <p>you have visited the page{{num_visit}} time{{num_visit|pluralize}}</p>
+        </div>
+    </div>
+{% endblock  %}
